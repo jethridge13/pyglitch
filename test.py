@@ -28,5 +28,19 @@ def test3():
 	PixelSorter.pixelLineWithGradient(img, 34, 36, 'v', 100, (29, 113, 247), (45, 173, 13))
 	img.show()
 
+def test4():
+	img = Image.new('RGBA', (250, 250), 'darkred')
+
+	PixelSorter.pixelShadow(img, 50, 50, 'N', 25, (255, 255, 255), blockSize=10)
+	PixelSorter.pixelShadow(img, 100, 50, 'E', 25, (255, 255, 255), blockSize=10)
+	PixelSorter.pixelShadow(img, 150, 50, 'S', 25, (255, 255, 255), blockSize=10)
+	PixelSorter.pixelShadow(img, 200, 50, 'W', 25, (255, 255, 255), blockSize=10)
+
+	PixelSorter.pixelShadow(img, 50, 100, 'N', 25, (255, 255, 255), blockSize=10, tint='light')
+	PixelSorter.pixelShadow(img, 100, 100, 'E', 25, (255, 255, 255), blockSize=10, tint='light')
+	PixelSorter.pixelShadow(img, 150, 100, 'S', 25, (255, 255, 255), blockSize=10, tint='light')
+	PixelSorter.pixelShadow(img, 200, 100, 'W', 25, (255, 255, 255), blockSize=10, tint='light')
+	img.show()
+
 if __name__ == '__main__':
-	test3()
+	test4()
